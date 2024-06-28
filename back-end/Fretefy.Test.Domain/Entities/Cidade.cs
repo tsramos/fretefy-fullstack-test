@@ -2,20 +2,18 @@
 
 namespace Fretefy.Test.Domain.Entities
 {
-    public class Cidade : IEntity
+    public class Cidade : Entity
     {
         public Cidade()
-        {
-        
-        }
-        public Cidade(string nome, string uf)
-        {
-            Id = Guid();
-            Nome = nome;
-            UF = uf;
+        {            
         }
 
-        public Guid Id { get; set; }
+        public Cidade(string nome, string uf)
+        {          
+            Id = Guid.NewGuid();
+            Nome = nome;
+            UF = uf;
+        }  
 
         public string Nome { get; set; }
 

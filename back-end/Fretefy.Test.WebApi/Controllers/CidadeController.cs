@@ -6,8 +6,8 @@ using System.Collections.Generic;
 
 namespace Fretefy.Test.WebApi.Controllers
 {
-    [Route("api/cidade")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CidadeController : ControllerBase
     {
         private readonly ICidadeService _cidadeService;

@@ -5,11 +5,10 @@ using Fretefy.Test.Infra.EntityFramework;
 using Fretefy.Test.Infra.EntityFramework.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace Fretefy.Test.WebApi
 {
@@ -21,6 +20,24 @@ namespace Fretefy.Test.WebApi
             services.AddDbContext<TestDbContext>((provider, options) =>
             {
                 options.UseSqlite("Data Source=Data\\Test.db");
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Fretefy Test",
+                    Description = "Api de criação de cidades e regiões."
+                });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
             });
 
             ConfigureInfraService(services);
@@ -47,6 +64,14 @@ namespace Fretefy.Test.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+                c.RoutePrefix = string.Empty;
+            });
+
+            app.UseCors("AllowSpecificOrigin");
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
