@@ -1,14 +1,11 @@
-using Fretefy.Test.Domain.Interfaces;
-using Fretefy.Test.Domain.Interfaces.Repositories;
-using Fretefy.Test.Domain.Services;
 using Fretefy.Test.Infra.EntityFramework;
-using Fretefy.Test.Infra.EntityFramework.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Fretefy.Test.IOC;
 
 namespace Fretefy.Test.WebApi
 {
@@ -32,6 +29,9 @@ namespace Fretefy.Test.WebApi
                 });
             });
 
+            services.AddDomainServices();
+            services.AddRepositories();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
@@ -40,21 +40,10 @@ namespace Fretefy.Test.WebApi
                                       .AllowAnyHeader());
             });
 
-            ConfigureInfraService(services);
-            ConfigureDomainService(services);
+            
 
             services.AddMvc()
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);
-        }
-
-        private void ConfigureDomainService(IServiceCollection services)
-        {
-            services.AddScoped<ICidadeService, CidadeService>();
-        }
-
-        private void ConfigureInfraService(IServiceCollection services)
-        {
-            services.AddScoped<ICidadeRepository, CidadeRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
