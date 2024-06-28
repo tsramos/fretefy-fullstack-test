@@ -8,10 +8,9 @@ namespace Fretefy.Test.Domain.Entities
         {
         
         }
-
         public Cidade(string nome, string uf)
         {
-            Id = Guid.NewGuid();
+            Id = Guid();
             Nome = nome;
             UF = uf;
         }
