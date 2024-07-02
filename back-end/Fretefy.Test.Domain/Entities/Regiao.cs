@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Fretefy.Test.Domain.Entities
 {
@@ -13,9 +14,10 @@ namespace Fretefy.Test.Domain.Entities
 
         public Regiao()
         {                
+            Cidades = new List<RegiaoCidade>();
         }
 
-        public Regiao(string nome, IEnumerable<RegiaoCidade> cidades)
+        public Regiao(string nome, IEnumerable<RegiaoCidade> cidades) 
         {
             Nome = nome;
             Cidades = cidades;

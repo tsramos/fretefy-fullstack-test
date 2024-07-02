@@ -7,11 +7,10 @@ namespace Fretefy.Test.Infra.EntityFramework.Mappings
     public class RegiaoMap : IEntityTypeConfiguration<Regiao>
     {
         public void Configure(EntityTypeBuilder<Regiao> builder)
-        {
-            builder.ToTable("Regiões");
+        {            
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).IsRequired();
-            builder.HasMany(x => x.Cidades).WithOne(x => x.Regiao);
+            builder.HasMany(x => x.Cidades).WithOne(x => x.Regiao).HasForeignKey(x => x.RegiaoId);
         }
     }
 }

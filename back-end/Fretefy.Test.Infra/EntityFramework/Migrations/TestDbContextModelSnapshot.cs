@@ -39,163 +39,163 @@ namespace Fretefy.Test.Infra.EntityFramework.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a55d7fd7-e337-45a3-9edf-79d4f5bb0f71"),
+                            Id = new Guid("18ae3807-9531-4c01-8473-6359e34a2051"),
                             Nome = "Rio Branco",
                             UF = "AC"
                         },
                         new
                         {
-                            Id = new Guid("38aca219-2411-46bf-9937-0ac50c58c907"),
+                            Id = new Guid("1fbb1783-8f30-4f44-be49-fef06f5d2064"),
                             Nome = "Maceió",
                             UF = "AL"
                         },
                         new
                         {
-                            Id = new Guid("edaea6c9-3ca2-4c1b-a6bb-d7b67d0eaca6"),
+                            Id = new Guid("de8f2b5d-f62b-4e21-9642-9e8c03c37876"),
                             Nome = "Macapá",
                             UF = "AP"
                         },
                         new
                         {
-                            Id = new Guid("4471bb5c-1d16-49bb-b6f7-15c81607fdd3"),
+                            Id = new Guid("83114fe9-c4cd-478c-b785-43f962e8c558"),
                             Nome = "Manaus",
                             UF = "AM"
                         },
                         new
                         {
-                            Id = new Guid("d69b408b-293c-466b-9c41-c3cc37c6a910"),
+                            Id = new Guid("50971a99-ca12-4209-b025-4ae45a9a50fb"),
                             Nome = "Salvador",
                             UF = "BA"
                         },
                         new
                         {
-                            Id = new Guid("d6790f1f-1ff2-480c-bf3c-17e2c6b6d664"),
+                            Id = new Guid("ca9e0755-196f-4f26-8bee-82316e6c3440"),
                             Nome = "Fortaleza",
                             UF = " CE"
                         },
                         new
                         {
-                            Id = new Guid("1e9f13c0-90e0-4367-8623-ec03d19f494a"),
+                            Id = new Guid("1789fa6d-1a64-4b11-bf4e-7c371e234e77"),
                             Nome = "Brasília",
                             UF = "DF"
                         },
                         new
                         {
-                            Id = new Guid("f08e9d9b-aede-4f48-9e07-37c1938b95c2"),
+                            Id = new Guid("339498f2-2391-4be1-a0c2-93b40f524187"),
                             Nome = "Vitória",
                             UF = "ES"
                         },
                         new
                         {
-                            Id = new Guid("5f3515a9-ac45-4993-ac17-9e16f1689deb"),
+                            Id = new Guid("faac39f0-47bd-4132-8a53-7a7792cf59a1"),
                             Nome = "Goiânia",
                             UF = "GO"
                         },
                         new
                         {
-                            Id = new Guid("2deb2ca4-11c7-4992-ac0e-32ec53ae58a6"),
+                            Id = new Guid("db197637-6b63-4b5b-af68-d9caaca1af10"),
                             Nome = "São Luís",
                             UF = "MA"
                         },
                         new
                         {
-                            Id = new Guid("b36de4a8-2451-4f6f-9bab-65657a328e59"),
+                            Id = new Guid("ae5c870a-5fcd-4747-8264-bb00eb3a5630"),
                             Nome = "Cuiabá",
                             UF = "MT"
                         },
                         new
                         {
-                            Id = new Guid("bb8594e8-fc0f-4bb3-8bf0-b983d9e698e2"),
+                            Id = new Guid("07729620-5592-47aa-9246-48ee35b3105e"),
                             Nome = "Campo Grande",
                             UF = "MS"
                         },
                         new
                         {
-                            Id = new Guid("0cacdbc3-ead0-4a37-af1f-207b3e3d5e6e"),
+                            Id = new Guid("573d59da-9146-46f3-b95f-21adc7acf2ef"),
                             Nome = "Belo Horizonte",
                             UF = "MG"
                         },
                         new
                         {
-                            Id = new Guid("89010611-abfa-43c3-998f-159b13d845f8"),
+                            Id = new Guid("7ae13d1d-0349-42f2-a3b4-1e80d7f831de"),
                             Nome = "Belém",
                             UF = "PA"
                         },
                         new
                         {
-                            Id = new Guid("e645bf13-44f6-4a68-a19b-9bfa8c53ff83"),
+                            Id = new Guid("46a5d27a-8733-4920-9dbc-666734bc1e79"),
                             Nome = "João Pessoa",
                             UF = "PB"
                         },
                         new
                         {
-                            Id = new Guid("756567d5-dc6a-47f0-8cf2-8b7b84016eff"),
+                            Id = new Guid("2e107097-ebd0-420d-b67a-d6c484676d33"),
                             Nome = "Curitiba",
                             UF = "PR"
                         },
                         new
                         {
-                            Id = new Guid("e665babd-fe8f-4241-b20f-1fec9689c220"),
+                            Id = new Guid("2bc6c8fd-47c0-476e-9a04-7bae09958584"),
                             Nome = "Recife",
                             UF = "PE"
                         },
                         new
                         {
-                            Id = new Guid("56eb1626-33fb-48f7-adfd-9f4c28776465"),
+                            Id = new Guid("3652f052-fc28-4ca1-b522-b5402809dfb9"),
                             Nome = "Teresina",
                             UF = "PI"
                         },
                         new
                         {
-                            Id = new Guid("47c13a7e-b73a-4933-bfa1-ddb880b9331b"),
+                            Id = new Guid("d86bfdd9-9da8-4203-b97c-b94f35bd19b5"),
                             Nome = "Rio de Janeiro",
                             UF = "RJ"
                         },
                         new
                         {
-                            Id = new Guid("508c7d39-f3e2-4283-8343-fc53cdc9db0f"),
+                            Id = new Guid("13be6500-c94a-4128-9750-ed23f5daf9cd"),
                             Nome = "Natal",
                             UF = "RN"
                         },
                         new
                         {
-                            Id = new Guid("4d3dc9cd-3436-48e3-833c-2ebe3876e652"),
+                            Id = new Guid("41a8666b-ae18-4b29-b02b-9a120084f63d"),
                             Nome = "Porto Alegre",
                             UF = "RS"
                         },
                         new
                         {
-                            Id = new Guid("248b2d56-99aa-4dc5-b127-68ccaeab8c8c"),
+                            Id = new Guid("5cfe25fa-7da2-4edc-b4c6-769888151158"),
                             Nome = "Porto Velho",
                             UF = "RO"
                         },
                         new
                         {
-                            Id = new Guid("a9464047-b910-44f3-bb7f-fa3606d6b92c"),
+                            Id = new Guid("4f1bdb40-15f4-45e3-a75d-1f75ba860746"),
                             Nome = "Boa Vista",
                             UF = "RR"
                         },
                         new
                         {
-                            Id = new Guid("ba007780-2dcf-4500-b25e-c6cb15064bec"),
+                            Id = new Guid("410ae4f4-465f-4bf6-8a20-c39070d5fe69"),
                             Nome = "Florianópolis",
                             UF = "SC"
                         },
                         new
                         {
-                            Id = new Guid("b6f98371-5781-4a8f-bac1-33d335d2a390"),
+                            Id = new Guid("6fb2ee5a-b4d4-4535-81c1-f11b21252ae0"),
                             Nome = "São Paulo",
                             UF = "SP"
                         },
                         new
                         {
-                            Id = new Guid("e5f69251-7ce6-4286-a585-ded5cee8cf58"),
+                            Id = new Guid("6d2573b3-630e-45ab-8bac-2ddda77027be"),
                             Nome = "Aracaju",
                             UF = "SE"
                         },
                         new
                         {
-                            Id = new Guid("a8e4c6c9-7107-4dfa-9b06-adb783e77286"),
+                            Id = new Guid("ce354307-17a2-4859-8ab8-393ef52aa7b1"),
                             Nome = "Palmas",
                             UF = "TO"
                         });
@@ -216,7 +216,7 @@ namespace Fretefy.Test.Infra.EntityFramework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Regiões");
+                    b.ToTable("Regiao");
                 });
 
             modelBuilder.Entity("Fretefy.Test.Domain.Entities.RegiaoCidade", b =>

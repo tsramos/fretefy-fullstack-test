@@ -1,7 +1,8 @@
-﻿using Fretefy.Test.Domain.Entities;
-using Fretefy.Test.Domain.Interfaces.Services;
+﻿using Fretefy.Test.Domain.Interfaces.Services;
+using Fretefy.Test.WebApi.EntityBuilder;
+using Fretefy.Test.WebApi.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections;
+using System;
 
 namespace Fretefy.Test.WebApi.Controllers
 {
@@ -9,7 +10,7 @@ namespace Fretefy.Test.WebApi.Controllers
     [Route("api/[controller]")]
     public class RegiaoController : Controller
     {
-       private readonly IRegiaoService _regiaoService;
+        private readonly IRegiaoService _regiaoService;
 
         public RegiaoController(IRegiaoService regiaoService)
         {
@@ -17,10 +18,43 @@ namespace Fretefy.Test.WebApi.Controllers
         }
 
         [HttpGet]
-        public  IActionResult Get()
+        public IActionResult Get()
         {
             var regioes = _regiaoService.Get();
-            return Ok(regioes);
+            var regiaoViewModel = RegiaoBuilder.BuildViews(regioes);
+            return Ok(regiaoViewModel);
         }
+
+        [HttpPost]
+        public IActionResult Post(RegiaoViewModel regiao)
+        {
+            var entity = RegiaoBuilder.Builder(regiao);
+            try
+            {
+                _regiaoService.AddRegiao(entity).GetAwaiter().GetResult();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public IActionResult Update(RegiaoViewModel regiao)
+        {
+            var entity = RegiaoBuilder.Builder(regiao);
+            try
+            {
+                _regiaoService.UpdateRegiao(entity).GetAwaiter().GetResult();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
     }
 }

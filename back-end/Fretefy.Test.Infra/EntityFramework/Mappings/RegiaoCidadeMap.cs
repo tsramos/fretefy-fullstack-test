@@ -8,9 +8,10 @@ namespace Fretefy.Test.Infra.EntityFramework.Mappings
     {
         public void Configure(EntityTypeBuilder<RegiaoCidade> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.HasOne(x => x.Cidade);
-            builder.HasOne(x => x.Regiao);
+            builder.HasKey(x => x.Id);        
+            builder.HasOne(x => x.Regiao)
+                .WithMany(x => x.Cidades)
+                .HasForeignKey(x => x.RegiaoId);
         }
     }
 }

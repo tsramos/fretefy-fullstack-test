@@ -19,6 +19,7 @@ namespace Fretefy.Test.IOC
         {
             services.AddScoped<ICidadeRepository, CidadeRepository>();
             services.AddScoped<IRegiaoRepository, RegiaoRepository>();
+            services.AddScoped<IRegiaoCidadeRepository, RegiaoCidadeRepository>();
         }
     }
 }

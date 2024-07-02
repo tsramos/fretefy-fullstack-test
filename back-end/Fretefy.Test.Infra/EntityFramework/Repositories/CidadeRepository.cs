@@ -6,29 +6,26 @@ using System.Linq;
 
 namespace Fretefy.Test.Infra.EntityFramework.Repositories
 {
-    public class CidadeRepository : ICidadeRepository
+    public class CidadeRepository : BaseRepository<Cidade>, ICidadeRepository
     {
-        private DbSet<Cidade> _dbSet;
-
-        public CidadeRepository(DbContext dbContext)
-        {
-            _dbSet = dbContext.Set<Cidade>();
+        public CidadeRepository(TestDbContext context) : base(context)
+        {            
         }
 
         public IQueryable<Cidade> List()
         {
-            return _dbSet.AsQueryable();
+            return this.Get();
         }
 
         public IEnumerable<Cidade> ListByUf(string uf)
         {
-            return _dbSet.Where(w => EF.Functions.Like(w.UF, $"%{uf}%"));
+            return Get().Where(w => EF.Functions.Like(w.UF, $"%{uf}%"));
         }
 
         public IEnumerable<Cidade> Query(string terms)
         {
 
-            return _dbSet.Where(w => EF.Functions.Like(w.Nome, $"%{terms}%") || EF.Functions.Like(w.UF, $"%{terms}%"));
+            return Get().Where(w => EF.Functions.Like(w.Nome, $"%{terms}%") || EF.Functions.Like(w.UF, $"%{terms}%"));
         }
     }
 }
