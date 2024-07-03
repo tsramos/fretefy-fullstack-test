@@ -2,14 +2,14 @@
 
 namespace Fretefy.Test.Domain.Entities
 {
-    public class RegiaoCidade : Entity 
+    public class RegiaoCidade : Entity
     {
         public RegiaoCidade()
-        {             
+        {
         }
 
         public RegiaoCidade(Guid cidadeId)
-        {       
+        {
             CidadeId = cidadeId;
         }
 
@@ -17,7 +17,7 @@ namespace Fretefy.Test.Domain.Entities
         public Guid RegiaoId { get; set; }
         public Cidade Cidade { get; set; }
         public Guid CidadeId { get; set; }
-        
+
     }
 
 }

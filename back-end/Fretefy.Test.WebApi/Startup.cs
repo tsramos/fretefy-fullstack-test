@@ -40,7 +40,7 @@ namespace Fretefy.Test.WebApi
                                       .AllowAnyHeader());
             });
 
-            
+
 
             services.AddMvc()
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);

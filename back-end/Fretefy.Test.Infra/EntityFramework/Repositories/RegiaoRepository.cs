@@ -22,9 +22,9 @@ namespace Fretefy.Test.Infra.EntityFramework.Repositories
 
         public async Task<bool> PossuiCidade(Guid idRegiao, Guid idCidade)
         {
-             int count = await _context.Set<RegiaoCidade>()
-                                 .CountAsync(x => x.RegiaoId == idRegiao &&
-                                        x.CidadeId == idCidade);
+            int count = await _context.Set<RegiaoCidade>()
+                                .CountAsync(x => x.RegiaoId == idRegiao &&
+                                       x.CidadeId == idCidade);
             return count > 0;
         }
 
@@ -38,7 +38,7 @@ namespace Fretefy.Test.Infra.EntityFramework.Repositories
         {
             _context.Update(regiao);
             await _context.SaveChangesAsync();
-        } 
+        }
 
         public List<Regiao> GetRegiaoCompleta()
         {

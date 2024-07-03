@@ -8,6 +8,6 @@ namespace Fretefy.Test.WebApi.ViewModel
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public bool Ativo { get; set; }
-        public List<RegiaoCidadeViewModel> Cidades { get; set; }             
+        public List<RegiaoCidadeViewModel> Cidades { get; set; }
     }
 }

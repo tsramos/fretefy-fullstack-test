@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Fretefy.Test.Domain.Interfaces.Repositories
 {
-    public interface ICidadeRepository : IBaseRepository<Cidade> 
+    public interface ICidadeRepository : IBaseRepository<Cidade>
     {
         IQueryable<Cidade> List();
         IEnumerable<Cidade> ListByUf(string uf);

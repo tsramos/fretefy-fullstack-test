@@ -9,7 +9,7 @@ namespace Fretefy.Test.Infra.EntityFramework.Repositories
     public class CidadeRepository : BaseRepository<Cidade>, ICidadeRepository
     {
         public CidadeRepository(TestDbContext context) : base(context)
-        {            
+        {
         }
 
         public IQueryable<Cidade> List()

@@ -10,6 +10,6 @@ namespace Fretefy.Test.Domain.Interfaces.Services
 
         Task AddRegiao(Regiao regiao);
 
-        Task UpdateRegiao(Regiao regiao);   
+        Task UpdateRegiao(Regiao regiao);
     }
 }

@@ -1,5 +1,4 @@
-﻿using Fretefy.Test.Infra.EntityFramework.Mappings;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Fretefy.Test.Infra.EntityFramework
 {

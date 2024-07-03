@@ -13,7 +13,7 @@ namespace Fretefy.Test.WebApi.EntityBuilder
                 .ForEach(c => cidades.Add(new RegiaoCidade(c.CidadeId)));
 
             return new Regiao()
-            {   
+            {
                 Id = regiaoViewModel.Id,
                 Ativo = regiaoViewModel.Ativo,
                 Nome = regiaoViewModel.Nome,
@@ -29,10 +29,11 @@ namespace Fretefy.Test.WebApi.EntityBuilder
                 List<RegiaoCidadeViewModel> idCidades = new List<RegiaoCidadeViewModel>();
                 foreach (var c in regiao.Cidades)
                 {
-                    idCidades.Add(new RegiaoCidadeViewModel() 
-                        {
-                            RegiaoId = c.RegiaoId, 
-                        CidadeId = c.CidadeId });
+                    idCidades.Add(new RegiaoCidadeViewModel()
+                    {
+                        RegiaoId = c.RegiaoId,
+                        CidadeId = c.CidadeId
+                    });
                 }
 
                 list.Add(new RegiaoViewModel()
